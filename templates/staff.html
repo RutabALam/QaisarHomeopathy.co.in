@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block title %}Our Team - Qaisar Clinic{% endblock %}
+
+{% block content %}
+<section class="staff">
+    <h1 class="heading">Meet Our Expert Team</h1>
+    <p class="subheading">Dedicated professionals ensuring your well-being.</p>
+
+    <!-- Doctors Section -->
+    <h2 class="section-title">Doctors</h2>
+    <div class="staff-container">
+        <div class="staff-card">
+            <img src="{{ url_for('static', filename='images/dr_aftab.jpg') }}" alt="Dr. Aftab Alam">
+            <div class="staff-info">
+                <h3>Dr. Aftab Alam</h3>
+                <p class="qualification">MD (Medicine)</p>
+                <p class="description">Dr. Aftab Alam is a highly experienced homeopathic doctor, known for his expertise in treating chronic and complex cases. His dedication to holistic healing has helped numerous patients.</p>
+            </div>
+        </div>
+
+        <div class="staff-card">
+            <img src="{{ url_for('static', filename='images/dr_samina.jpg') }}" alt="Dr. Samina Alam">
+            <div class="staff-info">
+                <h3>Dr. Samina Alam</h3>
+                <p class="qualification">BHMS</p>
+                <p class="description">With years of experience in homeopathy, Dr. Samina Alam specializes in women's health, child care, and lifestyle disorders. Her compassionate approach ensures personalized care for every patient.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Assistant Doctors -->
+    <h2 class="section-title">Assistant Doctors</h2>
+    <div class="staff-container">
+        <div class="staff-card">
+            <img src="{{ url_for('static', filename='images/dr_111.jpg') }}" alt="Dr. 001">
+            <div class="staff-info">
+                <h3>Coming Soon!</h3>
+                <p class="description">Coming Soon!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pharmacist Section -->
+    <h2 class="section-title">Pharmacist</h2>
+    <div class="staff-container">
+        <div class="staff-card">
+            <img src="{{ url_for('static', filename='images/dr_abdul_rahman.jpg') }}" alt="Dr. Abdul Rahman">
+            <div class="staff-info">
+                <h3>Dr. Abdul Rahman</h3>
+                <p class="description">With expertise in homeopathic medicines, Dr. Abdul Rahman ensures the highest quality of pharmacy services, helping patients get their prescriptions accurately and efficiently.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Receptionist Section -->
+    <h2 class="section-title">Receptionist</h2>
+    <div class="staff-container">
+        <div class="staff-card">
+            <img src="{{ url_for('static', filename='images/mr_azhar_khan.jpg') }}" alt="Mr. Azhar Khan">
+            <div class="staff-info">
+                <h3>Mr. Azhar Khan</h3>
+                <p class="description">As the receptionist at Qaisar Clinic, Mr. Azhar Khan ensures smooth appointment scheduling, patient management, and welcoming services for every visitor.</p>
+            </div>
+        </div>
+    </div>
+
+</section>
+{% endblock %}

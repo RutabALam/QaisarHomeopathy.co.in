@@ -1,0 +1,157 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+    body {
+        margin: 0 200px;
+        font-family: Arial, sans-serif;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    h1 {
+        color: #d32f2f;
+        font-size: 28px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        color: #388e3c;
+        font-size: 24px;
+        margin-top: 30px;
+    }
+
+    p {
+        font-size: 18px;
+        margin: 10px 0;
+    }
+
+    .article-meta {
+        font-size: 14px;
+        color: #777;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .quote {
+        background: #f9f9f9;
+        padding: 10px;
+        border-left: 5px solid #d32f2f;
+        font-style: italic;
+        margin: 20px 0;
+    }
+
+    ul {
+        margin: 10px 0;
+        padding: 10px 20px;
+    }
+
+    li {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    .sources {
+        font-size: 16px;
+        margin-top: 30px;
+        border-top: 2px solid #ddd;
+        padding-top: 10px;
+    }
+
+    .author {
+        font-size: 16px;
+        font-weight: bold;
+        text-align: right;
+        margin-top: 20px;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+</style>
+
+<h1>Managing Health After Ramadan: A Guide to Post-Fasting Wellness</h1>
+<p class="article-meta">Published on April 10, 2025</p>
+
+<img src="{{ url_for('static', filename='images/articles/ramadhan.jpg') }}" 
+     alt="Managing Health After Ramadan">
+
+<h2>Introduction</h2>
+<p>Ramadan is a sacred month of fasting, self-discipline, and spiritual reflection. While fasting brings several health benefits, many individuals face challenges transitioning back to normal routines after Ramadan.</p>
+
+<p>Abrupt dietary shifts, lack of hydration, and irregular sleep patterns can lead to <strong>fatigue, digestive issues, and weight fluctuations</strong>. A smooth transition post-Ramadan is essential for maintaining long-term well-being.</p>
+
+<div class="quote">
+    "The habits we develop during Ramadan can be the foundation of a healthier, more mindful lifestyle throughout the year."
+</div>
+
+<h2>The Science Behind Post-Fasting Adjustments</h2>
+<p>Research from the <strong>Journal of Nutrition and Fasting Health</strong> shows that fasting improves metabolism, detoxifies the body, and enhances gut health. However, after Ramadan, the body requires gradual re-adaptation.</p>
+
+<ul>
+    <li><strong>Metabolic Changes:</strong> Fasting shifts the body to fat-burning mode. Overeating post-Ramadan can lead to rapid weight gain.</li>
+    <li><strong>Digestive System Reset:</strong> The gut stabilizes during fasting, and sudden dietary changes can cause discomfort.</li>
+    <li><strong>Hydration Needs:</strong> The body often experiences dehydration after Ramadan, requiring a progressive rehydration strategy.</li>
+</ul>
+
+<h2>Gradual Dietary Transition: What to Eat After Ramadan</h2>
+<p>One common mistake after Ramadan is consuming heavy, processed foods. Experts from <strong>Harvard Medical School</strong> recommend prioritizing nutrient-dense foods:</p>
+
+<ul>
+    <li>✅ <strong>Complex Carbohydrates</strong> (oats, quinoa) – Provide long-lasting energy.</li>
+    <li>✅ <strong>Lean Proteins</strong> (fish, plant-based proteins) – Prevent post-fasting fatigue.</li>
+    <li>✅ <strong>Healthy Fats</strong> (olive oil, nuts) – Support brain and heart health.</li>
+    <li>✅ <strong>High-Fiber Foods</strong> (fruits, legumes) – Promote digestion and gut health.</li>
+    <li>✅ <strong>Hydrating Foods</strong> (cucumber, coconut water) – Combat dehydration.</li>
+</ul>
+
+<h2>The Role of Hydration in Post-Ramadan Recovery</h2>
+<p>The <strong>World Health Organization (WHO)</strong> recommends drinking at least <strong>2.5 liters of water daily</strong>. Dehydration symptoms like headaches and muscle cramps are common post-Ramadan.</p>
+
+<h2>Restoring Sleep Patterns and Mental Well-being</h2>
+<p>Due to late-night prayers and early Suhoor, many people experience disrupted sleep schedules. The <strong>Sleep Foundation</strong> suggests gradually restoring sleep cycles to prevent fatigue.</p>
+
+<ul>
+    <li>🌙 Shift bedtime earlier to adjust naturally.</li>
+    <li>🛏️ Avoid screens before bed for better sleep quality.</li>
+    <li>🕋 Continue <strong>spiritual reflection</strong> before sleep.</li>
+</ul>
+
+<h2>Physical Activity: Restoring Strength After Ramadan</h2>
+<p>A study from the <strong>Journal of Sports Medicine</strong> suggests reintroducing physical activity gradually. Recommended exercises:</p>
+
+<ul>
+    <li>🏃 Walking or light jogging – Improves blood circulation.</li>
+    <li>🧘 Stretching & Yoga – Enhances flexibility.</li>
+    <li>🚴 Low-intensity cardio – Boosts stamina.</li>
+</ul>
+
+<h2>Continuing Healthy Habits Beyond Ramadan</h2>
+<p>The best way to sustain Ramadan's health benefits is by maintaining self-discipline and mindful habits:</p>
+
+<ul>
+    <li>🕌 <strong>Voluntary Fasting:</strong> Sunnah fasts (Mondays & Thursdays) keep the body in balance.</li>
+    <li>🍽️ <strong>Portion Control:</strong> Prevents overeating and digestive discomfort.</li>
+    <li>📿 <strong>Spiritual Reflection:</strong> Keeps mental peace intact.</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>Managing health after Ramadan requires <strong>balanced nutrition, hydration, proper sleep, and exercise</strong>. Gradual lifestyle changes will help sustain the physical and spiritual benefits gained during the holy month.</p>
+
+<div class="sources">
+    <h2>Sources & References</h2>
+    <ul>
+        <li><strong>Journal of Nutrition and Fasting Health</strong> – Effects of fasting on metabolism (2022).</li>
+        <li><strong>Harvard Medical School</strong> – Post-fasting dietary recommendations (2023).</li>
+        <li><strong>World Health Organization (WHO)</strong> – Hydration guidelines (2021).</li>
+        <li><strong>The Sleep Foundation</strong> – Impact of Ramadan on sleep patterns (2023).</li>
+        <li><strong>Journal of Sports Medicine</strong> – Exercise recommendations post-fasting (2023).</li>
+    </ul>
+</div>
+
+<p class="author">Written by Dr. Samina Alam</p>
+
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %}Online Consultation - Qaisar Clinic{% endblock %}
+
+{% block content %}
+<section class="consultation">
+    <h1 class="heading">Online Consultation</h1>
+    <p class="subheading">Get expert homeopathic advice from the comfort of your home.</p>
+
+    <!-- Disclaimer -->
+    <div class="consultation-section disclaimer">
+        <h2>Important Notice</h2>
+        <p><b>We do not accept appointments for in-clinic visits.</b> All consultations are conducted online.</p>
+        <p>Our expert doctors provide personalized homeopathic treatment based on your symptoms and medical history. Also the Online form dosnt works right now so call on the helpline Number</p>
+    </div>
+
+    <!-- How It Works -->
+    <div class="consultation-section">
+        <h2>How It Works?</h2>
+        <ol>
+            <li>Fill out the consultation form below.</li>
+            <li>Our team will review your case and schedule a video consultation.</li>
+            <li>Receive your prescription and treatment plan via email or WhatsApp.</li>
+        </ol>
+    </div>
+
+    <!-- Online Appointment Form -->
+    <div class="consultation-section">
+        <h2>Book an Online Appointment</h2>
+        <form action="#" method="POST">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="phone">Phone Number (WhatsApp Preferred)</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email">
+
+            <label for="symptoms">Describe Your Symptoms</label>
+            <textarea id="symptoms" name="symptoms" rows="5" required></textarea>
+
+            <button type="submit">Submit Request</button>
+        </form>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="consultation-section contact-section">
+        <h2>Need Help?</h2>
+        <p><b>Call/WhatsApp:</b> +91 99755 25199</p>
+        <p><b>Email:</b> consultation@qaisarclinic.com</p>
+    </div>
+</section>
+{% endblock %}

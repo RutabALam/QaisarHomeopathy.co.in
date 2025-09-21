@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qaisar Homeopathic Clinic</title>
+    <!-- Favicon -->
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <header>
+    <!-- Logo (Now Clickable) -->
+    <a href="{{ url_for('home') }}" class="logo">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Qaisar Homeopathic Clinic">
+    </a>
+    
+
+        <!-- Hamburger Menu Icon -->
+        <div class="hamburger" onclick="toggleMenu()">
+            ☰
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('services') }}">Services</a></li>
+                <li><a href="{{ url_for('staff') }}">Staff</a></li>
+                <li><a href="{{ url_for('internship') }}">Internship</a></li>
+                <li><a href="{{ url_for('knowledge') }}">Knowledge</a></li>
+                <li><a href="{{ url_for('consultation') }}">Consultation</a></li>
+                <li><a href="{{ url_for('marifa_home') }}">MU Beta</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Qaisar Homeopathic Clinic</h3>
+                <p>Providing holistic and natural homeopathic treatments for over 20 years.</p>
+                <p>📍 Ganesh Colony, Near Panchayat Samiti Office, Aurangabad, Maharashtra, India</p>
+                <p>📞 +91 99755 25199</p>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('about') }}">About Us</a></li>
+                    <li><a href="{{ url_for('services') }}">Services</a></li>
+                    <li><a href="{{ url_for('consultation') }}">Consultation</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="/static/images/facebook-white.png" alt="Facebook"></a>
+                    <a href="#"><img src="/static/images/instagram-white.png" alt="Instagram"></a>
+                    <a href="#"><img src="/static/images/twitter-white.png" alt="Twitter"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Qaisar Homeopathic Clinic | All Rights Reserved | Devloped by Muhammed Rutab Aftab Alam</p>
+        </div>
+    </footer>
+    
+    <script>
+        function toggleMenu() {
+            document.getElementById("nav-links").classList.toggle("active");
+        }
+        </script>
+         
+    
+</body>
+</html>

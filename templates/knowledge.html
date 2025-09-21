@@ -1,0 +1,238 @@
+{% extends "base.html" %}
+
+{% block title %}Knowledge Hub{% endblock %}
+
+{% block content %}
+<section class="knowledge-hub">
+    <h1>Knowledge And Articles</h1>
+
+    <!-- Search Box -->
+    <div class="search-container">
+        <input type="text" id="search-box" placeholder="Search Articles...">
+        <i class="fas fa-search"></i>
+    </div>
+    
+    <!-- Link the external JS file -->
+    <script src="{{ url_for('static', filename='js/search.js') }}"></script>
+    
+<!-- Article List -->
+<div class="article-list">
+    <div class="article-container">
+        <img src="static/images/articles/benefits-hoomeopathy.jpg" alt="Benefits of Homeopathy" class="article-image">
+        <div class="article-content">
+            <h3 class="article-title">The Benefits of Homeopathy</h3>
+            <p class="article-preview">Homeopathy, a system of medicine that has stood the test of time, is based on the principle of "like cures like" and the use of highly diluted natural substances to stimulate the body's self-healing ability...</p>
+            <a href="{{ url_for('article_page', article_name='benefits-homeopathy') }}" class="read-more">Read More</a>
+        </div>
+    </div>
+
+    <div class="article-container">
+        <img src="static/images/articles/thyroid.jpg" alt="Thyroid" class="article-image">
+        <div class="article-content">
+            <h3 class="article-title">Thyroid</h3>
+            <p class="article-preview">The thyroid gland, a small butterfly-shaped organ in the neck, plays a vital role in regulating metabolism, energy levels, and overall well-being...</p>
+            <a href="articles/thyroid" class="read-more">Read More</a>
+        </div>
+    </div>
+
+    <div class="article-container">
+        <img src="static/images/articles/relieffromullcer.jpg" alt="Ulcerative Colitis" class="article-image">
+        <div class="article-content">
+            <h3 class="article-title">Overcoming Ulcerative Colitis</h3>
+            <p class="article-preview">Ulcerative colitis is a chronic inflammatory bowel disease (IBD) that affects the colon and rectum, causing severe discomfort...</p>
+            <a href="articles/relieffromallcer" class="read-more">Read More</a>
+        </div>
+    </div>
+
+    <div class="article-container">
+        <img src="static/images/articles/pcod_homeopathy.jpg" alt="Understanding PCOD" class="article-image">
+        <div class="article-content">
+            <h3 class="article-title">Understanding PCOD</h3>
+            <p class="article-preview">Polycystic Ovarian Disease (PCOD) is a common hormonal disorder that affects millions of women worldwide...</p>
+            <a href="articles/pcod" class="read-more">Read More</a>
+        </div>
+    </div>
+
+    <div class="article-container">
+        <img src="static/images/articles/ramadhan.jpg" alt="Ramadan Health Guide" class="article-image">
+        <div class="article-content">
+            <h3 class="article-title">Managing Health After Ramadan: A Guide to Post-Fasting Wellness</h3>
+            <p class="article-preview">Ramadan is a sacred month of fasting, self-discipline, and spiritual reflection...</p>
+            <a href="articles/postramadhan" class="read-more">Read More</a>
+        </div>
+    </div>
+
+    <div class="article-container">
+        <img src="static/images/articles/allergy.jpg" alt="Living Allergy-Free" class="article-image">
+        <div class="article-content">
+            <h3 class="article-title">Living an Allergy-Free Life with Homeopathy</h3>
+            <p class="article-preview">Allergies have become increasingly common, affecting millions worldwide...</p>
+            <a href="articles/allergy" class="read-more">Read More</a>
+        </div>
+    </div>
+
+    <div class="article-container">
+        <img src="static/images/articles/islam_science.jpg" alt="Islam and Science" class="article-image">
+        <div class="article-content">
+            <h3 class="article-title">Islam and Science: A Journey of Knowledge and Healing</h3>
+            <p class="article-preview">Islam, from its very inception, has been a religion that embraces knowledge, scientific exploration, and medical advancements...</p>
+            <a href="articles/islam_science" class="read-more">Read More</a>
+        </div>
+    </div>
+
+    <div class="article-container">
+        <img src="static/images/articles/smoke.jpeg" alt="Islam and Science" class="article-image">
+        <div class="article-content">
+            <h3 class="article-title">The Effects of Smoking and Homeopathic Recovery</h3>
+            <p class="article-preview">Smoking is a <strong>global health crisis</strong>, affecting millions of lives every year. Tobacco smoke contains over <span class="highlight">7,000 harmful chemicals</span>, many of which are toxic and carcinogenic. From lung disease to cardiovascular problems, the dangers of smoking are well-documented. However, with the rise of <strong>holistic healing</strong>, many individuals are turning to homeopathy to detoxify their bodies and recover from smoking's damage.</p>
+            <a href="articles/smoking" class="read-more">Read More</a>
+        </div>
+    </div>
+
+    <div class="article-container">
+        <img src="static/images/articles/overwork.jpeg" alt="Overwork and Health" class="article-image">
+        <div class="article-content">
+            <h3 class="article-title">The Tragic Comedy of Overworking</h3>
+            <p class="article-preview">Overwork is a <strong>silent epidemic</strong>, masquerading as productivity while eroding physical and mental health. Chronic stress, sleep deprivation, and burnout aren't badges of honor—they're ticking time bombs. From heart disease to crippling anxiety, the modern "hustle culture" comes at a <span class="highlight">devastating cost</span>. Yet, society still applauds the exhausted. Isn't it ironic?</p>
+            <a href="articles/overwork" class="read-more">Read More</a>
+        </div>
+    </div>
+</div> <!-- Closing .article-list -->
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const searchInput = document.getElementById("search-box");
+        const articles = document.querySelectorAll(".article-container");
+    
+        searchInput.addEventListener("input", function () {
+            const query = searchInput.value.toLowerCase();
+            
+            articles.forEach(article => {
+                const title = article.querySelector("h3").textContent.toLowerCase();
+                
+                if (title.includes(query)) {
+                    article.style.display = "block"; // Show matching articles
+                } else {
+                    article.style.display = "none";  // Hide non-matching articles
+                }
+            });
+        });
+    });
+    </script>
+    
+{% endblock %}
+
+{% block styles %}
+<style>
+    .knowledge-hub {
+        text-align: center;
+        padding: 40px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+        color: #006400;
+        margin-bottom: 20px;
+    }
+
+    #searchBox {
+        width: 50%;
+        padding: 10px;
+        font-size: 1em;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+
+    .article-list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .article-container {
+        width: 60%;
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        background: white;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        text-align: left;
+    }
+
+    .article-image {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 5px;
+        margin-right: 15px;
+    }
+
+    .article-content {
+        flex: 1;
+    }
+
+    .article-title {
+        font-size: 1.5em;
+        color: #333;
+        margin-bottom: 5px;
+    }
+
+    .article-preview {
+        font-size: 1em;
+        color: #555;
+    }
+
+    .read-more {
+        display: inline-block;
+        margin-top: 10px;
+        text-decoration: none;
+        color: #006400;
+        font-weight: bold;
+        /* 🎨 Search Box Container */
+    .search-container {
+        display: flex;
+        justify-content: center; /* Centers the search box */
+        align-items: center;
+        width: 100%;
+        max-width: 800px; /* Adjust width for desktop screens */
+        margin: 30px auto; /* Adds space above and below */
+        position: relative;
+    }
+
+    /* 🔍 Search Box Input */
+    .search-box {
+        width: 100%;
+        padding: 18px 60px 18px 25px; /* More padding for a premium feel */
+        font-size: 22px; /* Bigger text */
+        border: 3px solid #006400; /* Dark green border */
+        border-radius: 50px; /* Rounded edges */
+        outline: none;
+        background-color: white; /* Ensures contrast */
+        transition: all 0.3s ease-in-out; /* Smooth animation */
+    }
+
+    /* ✨ When User Clicks on the Search Box */
+    .search-box:focus {
+        border-color: #004d00; /* Slightly darker border */
+        box-shadow: 0px 0px 15px rgba(0, 100, 0, 0.6); /* Glow effect */
+    }
+
+    /* 🔍 Search Icon Inside the Box */
+    .search-container i {
+        position: absolute;
+        right: 20px; /* Keeps icon inside the box */
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 24px; /* Larger icon */
+        color: #006400; /* Dark green */
+        cursor: pointer;
+    }
+    }
+</style>
+{% endblock %}

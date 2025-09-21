@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}About Us - Qaisar Homeopathic Clinic{% endblock %}
+
+{% block content %}
+<div class="about-container">
+    <h1>About Qaisar Homeopathic Clinic</h1>
+    <p class="subheading">Healing with Nature's Power for Over 25 Years</p>
+
+    <div class="about-section">
+        <img src="{{ url_for('static', filename='images/clinic.jpg') }}" alt="Qaisar Homeopathic Clinic">
+        <p>
+            Welcome to <b>Qaisar Homeopathic Clinic</b>, a name synonymous with trust and healing in homeopathy. 
+            For over two decades, we have provided relief and holistic care to thousands of patients. 
+            Our approach focuses on **treating the root cause** of illnesses rather than just symptoms.  
+            We specialize in chronic diseases, thyroid disorders, hormonal imbalances, stress management,  
+            and immunity-boosting therapies. Our treatments are 100% natural, **free from harmful chemicals**  
+            and **side effects**, making them safe for people of all ages—including children and the elderly.  
+        </p>
+    </div>
+
+    <div class="about-section">
+        <h2>Why Choose Us?</h2>
+        <ul>
+            <li><b>25+ Years of Experience</b> - Trusted homeopathic solutions.</li>
+            <li><b>Expert Doctors</b> - Led by <b>Dr. Aftab Alam</b> & <b>Dr. Samina Alam</b>.</li>
+            <li><b>Personalized Care</b> - Tailored treatment plans for each patient.</li>
+            <li><b>Safe & Natural Healing</b> - No chemicals, no side effects.</li>
+        </ul>
+    </div>
+
+    <div class="about-section">
+        <h2>Contact Us</h2>
+        <p>📍 <b>Address:</b> Ganesh Colony, near Panchayat Samiti Office, Aurangabad, Maharashtra, India</p>
+        <p>📞 <b>Phone:</b> +91 99755 25199 | +91 93252 19678</p>
+        <p>📧 <b>Email:</b> contact@qaisarhomeo.com</p>
+
+        <!-- Social Media Buttons -->
+        <div class="social-icons">
+            <a href="https://www.facebook.com/" target="_blank" class="social-btn facebook">Facebook</a>
+            <a href="https://www.instagram.com/" target="_blank" class="social-btn instagram">Instagram</a>
+            <a href="https://wa.me/919975525199" target="_blank" class="social-btn whatsapp">WhatsApp</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Marifa University</title>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #000;
+      font-family: 'Anton', sans-serif;
+      color: #fff;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent);
+    }
+
+    .logo {
+      font-size: 32px;
+    }
+
+    .logo span:first-child {
+      color: #3fa9f5;
+    }
+
+    .logo span:last-child {
+      color: white;
+    }
+
+    .login-btn {
+      background-color: #3fa9f5;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .banner {
+      position: relative;
+      top: 80px;
+      width: 100%;
+      height: 600px;
+      background: url('/static/images/banner.jpg') no-repeat center center/cover;
+    }
+
+    .courses-section {
+      padding: 40px 20px;
+      margin-top: 40px;
+    }
+
+    .courses-title {
+      font-size: 28px;
+      margin-bottom: 30px;
+      border-left: 5px solid #3fa9f5;
+      padding-left: 15px;
+    }
+
+    .courses {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .course-card {
+      display: flex;
+      flex-direction: row;
+      background: #1a1a1a;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+      text-decoration: none;
+      color: #fff;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .course-card:hover {
+      transform: scale(1.02);
+    }
+
+    .course-image {
+      width: 250px;
+      height: 170px;
+      flex-shrink: 0;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .course-content {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .course-title {
+      font-family: 'Anton', sans-serif;
+      font-size: 24px;
+      color: #3fa9f5;
+      margin-bottom: 10px;
+    }
+
+    .course-description {
+      font-size: 15px;
+      color: #ccc;
+      line-height: 1.4;
+    }
+
+    @media (max-width: 768px) {
+      .course-card {
+        flex-direction: column;
+      }
+
+      .course-image {
+        width: 100%;
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <span>Marifa</span><span>University</span>
+    </div>
+    <button class="login-btn" onclick="window.location.href='/login'">Login</button>
+  </header>
+
+  <!-- Banner -->
+  <div class="banner"></div>
+
+  <!-- Courses Section -->
+  <section class="courses-section">
+    <div class="courses-title">Explore Courses</div>
+    <div class="courses">
+      
+      <a href="/marifa/anatomy" class="course-card">
+        <div class="course-image" style="background-image: url('/static/images/course1.jpg');"></div>
+        <div class="course-content">
+          <div class="course-title">Anatomy & Physiology</div>
+          <div class="course-description">Explore the foundational structure and function of the human body in a spiritually mindful way.</div>
+        </div>
+      </a>
+
+      <a href="#" class="course-card">
+        <div class="course-image" style="background-image: url('/static/images/course2.jpg');"></div>
+        <div class="course-content">
+          <div class="course-title">Fundamentals of Homeopathy</div>
+          <div class="course-description">Dive into the gentle yet profound principles of homeopathic healing rooted in tradition and wisdom.</div>
+        </div>
+      </a>
+
+      <a href="#" class="course-card">
+        <div class="course-image" style="background-image: url('/static/images/course3.jpg');"></div>
+        <div class="course-content">
+          <div class="course-title">Nutrition & Healing</div>
+          <div class="course-description">Learn how food, herbs, and prophetic medicine intersect to nourish body and soul.</div>
+        </div>
+      </a>
+
+      <a href="#" class="course-card">
+        <div class="course-image" style="background-image: url('/static/images/course4.jpg');"></div>
+        <div class="course-content">
+          <div class="course-title">Islamic Medicine</div>
+          <div class="course-description">Understand the sacred wisdom of Tibb Nabawi and how it heals with barakah and balance.</div>
+        </div>
+      </a>
+
+      <a href="#" class="course-card">
+        <div class="course-image" style="background-image: url('/static/images/course5.jpg');"></div>
+        <div class="course-content">
+          <div class="course-title">Pulse Diagnosis</div>
+          <div class="course-description">Master the ancient art of pulse analysis to unveil imbalances deep within.</div>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+</body>
+</html>

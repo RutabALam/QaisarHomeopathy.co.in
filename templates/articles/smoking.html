@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #3d1f1f;
+        color: #fff8f0;
+        margin: 50px;
+    }
+    .container {
+        max-width: 800px;
+        margin: auto;
+        background: #5a2e2e;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    }
+    h1 {
+        text-align: center;
+        color: #ffcc99;
+    }
+    h2 {
+        color: #ff9966;
+        border-bottom: 2px solid #ffcc99;
+        padding-bottom: 5px;
+    }
+    h3 {
+        color: #ffcc99;
+        font-weight: bold;
+    }
+    p {
+        line-height: 1.6;
+    }
+    strong {
+        color: #ff9966;
+    }
+    .highlight {
+        color: #ff6600;
+        font-weight: bold;
+    }
+    .quote {
+        background: #732626;
+        padding: 10px;
+        font-style: italic;
+        border-left: 5px solid #ff9966;
+        margin: 20px 0;
+    }
+    img {
+        width: 100%;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+</style>
+
+<div class="container">
+    <h1>The Effects of Smoking and Homeopathic Recovery</h1>
+
+    <img src="{{ url_for('static', filename='images/smoking_recovery.jpg') }}" alt="Effects of Smoking">
+
+    <h2>Introduction</h2>
+    <p>Smoking is a <strong>global health crisis</strong>, affecting millions of lives every year. Tobacco smoke contains over <span class="highlight">7,000 harmful chemicals</span>, many of which are toxic and carcinogenic. From lung disease to cardiovascular problems, the dangers of smoking are well-documented. However, with the rise of <strong>holistic healing</strong>, many individuals are turning to homeopathy to detoxify their bodies and recover from smoking's damage.</p>
+
+    <h2>Harmful Effects of Smoking</h2>
+
+    <h3>1. Respiratory Diseases</h3>
+    <p>Smoking is the <strong>leading cause</strong> of chronic obstructive pulmonary disease (COPD), which includes emphysema and chronic bronchitis. It damages lung tissues, reduces oxygen supply, and weakens the immune system, making smokers prone to infections.</p>
+
+    <h3>2. Cardiovascular Problems</h3>
+    <p>Nicotine and carbon monoxide increase <span class="highlight">heart rate</span>, blood pressure, and the risk of stroke. Smoking also contributes to the hardening of arteries (atherosclerosis), leading to serious heart diseases.</p>
+
+    <h3>3. Cancer Risk</h3>
+    <p>Smoking is a <strong>primary cause of lung cancer</strong> and is linked to cancers of the throat, mouth, esophagus, pancreas, and bladder. The carcinogens in tobacco trigger genetic mutations, leading to abnormal cell growth.</p>
+
+    <h3>4. Weakened Immune System</h3>
+    <p>Smoking weakens the immune system, making the body more susceptible to infections. Smokers often suffer from prolonged illnesses and increased inflammation.</p>
+
+    <h3>5. Effect on Mental Health</h3>
+    <p>While nicotine initially creates a feeling of relaxation, it leads to <span class="highlight">addiction and dependency</span>. Over time, it contributes to anxiety, depression, and cognitive decline.</p>
+
+    <h2>Homeopathy and Smoking Recovery</h2>
+    <p>Homeopathy offers a <strong>natural and holistic approach</strong> to help individuals quit smoking and heal from its harmful effects. Homeopathic remedies work by <span class="highlight">detoxifying the body</span>, reducing nicotine cravings, and repairing damage caused by smoking.</p>
+
+    <h3>How Homeopathy Helps</h3>
+    <ul>
+        <li>Supports lung healing and detoxification</li>
+        <li>Reduces nicotine cravings and withdrawal symptoms</li>
+        <li>Restores energy and strengthens the immune system</li>
+        <li>Improves respiratory function and circulation</li>
+        <li>Balances mood and reduces anxiety caused by smoking cessation</li>
+    </ul>
+
+    <h2>Additional Lifestyle Tips for Smokers</h2>
+    <ul>
+        <li><strong>Hydration:</strong> Drink plenty of water to flush out toxins from the body.</li>
+        <li><strong>Healthy Diet:</strong> Consume foods rich in antioxidants, such as fruits and vegetables, to repair tissue damage.</li>
+        <li><strong>Breathing Exercises:</strong> Deep breathing and yoga help strengthen the lungs and improve oxygen intake.</li>
+        <li><strong>Regular Exercise:</strong> Engaging in physical activities helps the body heal faster by improving circulation and reducing stress.</li>
+        <li><strong>Homeopathic Detox Therapy:</strong> Regular use of homeopathic detox remedies aids in cleansing the body and restoring overall health.</li>
+    </ul>
+
+    <h2>Conclusion</h2>
+    <p>Smoking is a major health risk, but quitting is possible with determination and the right support. <strong>Homeopathy offers a natural, side-effect-free approach</strong> to overcoming nicotine addiction and healing the body. By integrating homeopathic support, a healthy lifestyle, and strong willpower, one can successfully embark on a smoke-free journey and reclaim overall well-being.</p>
+</div>
+{% endblock %}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
+  <style>
+    /* Add your header, courses, etc. styling here */
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <span>Marifa</span><span>University</span>
+    </div>
+    <button class="login-btn" onclick="location.href='/'">Logout</button>
+  </header>
+
+  <!-- Banner -->
+  <div class="banner"></div>
+
+  <!-- Dashboard Content -->
+  <section class="dashboard-section">
+    <h1>Welcome, {{ username }}!</h1>
+    <div class="courses">
+      {% for course in courses %}
+        <div class="course-card" style="background-image: url('assets/{{ course.image }}');">
+          <div class="course-title">{{ course.name }}</div>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+
+</body>
+</html>

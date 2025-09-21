@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Anatomy & Physiology | Marifa University</title>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #000;
+      font-family: 'Poppins', sans-serif;
+      color: white;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 32px;
+      font-family: 'Anton', sans-serif;
+    }
+
+    .logo span:first-child {
+      color: red;
+    }
+
+    .logo span:last-child {
+      color: white;
+    }
+
+    .login-btn {
+      background-color: red;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    /* Back Button */
+    .back-btn {
+      background-color: transparent;
+      color: red;
+      border: 2px solid red;
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-bottom: 30px;
+      display: inline-block;
+      text-decoration: none;
+      margin-left: 40px;
+      border-radius: 25px;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background-color: red;
+      color: white;
+    }
+
+    /* Main Content */
+    .course-container {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 40px;
+    }
+
+    /* Left side - course details */
+    .course-details {
+      flex: 0 0 60%;
+      max-height: 500px;
+      overflow-y: auto;
+      padding-right: 20px;
+    }
+
+    .course-details h2 {
+      font-size: 28px;
+      color: red;
+      margin-bottom: 20px;
+    }
+
+    .course-details p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .course-details ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .course-details li {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    /* Course Content Index */
+    .course-index {
+      margin-top: 40px;
+    }
+
+    .course-index h3 {
+      font-size: 24px;
+      color: white;
+      border-bottom: 2px solid red;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+    }
+
+    .course-index ul {
+      padding-left: 20px;
+      font-size: 18px;
+    }
+
+    .course-index li {
+      margin-bottom: 10px;
+    }
+
+    /* Comparison Table */
+    .comparison-table {
+      margin-top: 40px;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    .comparison-table th, .comparison-table td {
+      padding: 12px 20px;
+      text-align: left;
+      border: 1px solid #444;
+    }
+
+    .comparison-table th {
+      background-color: #222;
+      color: white;
+    }
+
+    .comparison-table tr:nth-child(even) {
+      background-color: #333;
+    }
+
+    /* Right side - image and pricing */
+    .course-info {
+      flex: 0 0 35%;
+      text-align: center;
+      padding: 20px;
+      background-color: #222;
+      border-radius: 10px;
+    }
+
+    .course-info img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .course-heading {
+      font-size: 24px;
+      color: white;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .course-price {
+      font-size: 22px;
+      color: white;
+      margin-top: 20px;
+      margin-bottom: 30px;
+    }
+
+    .teacher-name {
+      font-size: 18px;
+      color: #bbb;
+      margin-bottom: 20px;
+    }
+
+    .buy-btn {
+      background-color: red;
+      color: white;
+      padding: 12px 24px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+      text-decoration: none;
+    }
+
+    .buy-btn:hover {
+      background-color: darkred;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header (same as homepage) -->
+  <header>
+    <div class="logo">
+      <span>Marifa</span><span>University</span>
+    </div>
+    <button class="login-btn">Login</button>
+  </header>
+
+  <!-- Back Button -->
+  <a href="/marifa" class="back-btn">← Back to Main Page</a>
+
+  <!-- Course Details and Info Section -->
+  <div class="course-container">
+
+    <!-- Left: Course Details -->
+    <div class="course-details">
+      <h2>Anatomy & Physiology</h2>
+      <p>This course explores the intricate design of the human body, crafted by Allah ﷻ. You will gain an in-depth understanding of human organ systems and their functions, providing you with essential knowledge for a career in homeopathy and holistic healing.</p>
+      <p>The course covers the following areas:</p>
+      <ul>
+        <li>Human skeletal and muscular systems</li>
+        <li>Circulatory and respiratory systems</li>
+        <li>Endocrine, digestive, and immune systems</li>
+        <li>Basic neurophysiology and nervous system</li>
+        <li>Interrelation between organs and homeopathic remedies</li>
+      </ul>
+      <p>By the end of this course, you will have a solid foundation in anatomy and physiology, which is essential for any aspiring homeopath to understand the physical body and how to treat it with natural remedies.</p>
+
+      <!-- Course Index -->
+      <div class="course-index">
+        <h3>Course Content:</h3>
+        <ul>
+          <li>Lesson 1: Introduction to Anatomy</li>
+          <li>Lesson 2: The Skeletal System</li>
+          <li>Lesson 3: The Muscular System</li>
+          <li>Lesson 4: The Circulatory System</li>
+          <li>Lesson 5: The Nervous System</li>
+          <li>Lesson 6: The Respiratory System</li>
+          <li>Lesson 7: The Digestive System</li>
+        </ul>
+      </div>
+
+      <!-- Comparison Table -->
+      <h3 style="color: red;">Comparison with Other Courses</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Course</th>
+            <th>Topics Covered</th>
+            <th>Duration</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Anatomy & Physiology</td>
+            <td>Skeletal, Muscular, Circulatory Systems, and more</td>
+            <td>12 Weeks</td>
+            <td>$199.99</td>
+          </tr>
+          <tr>
+            <td>Basic Homeopathy</td>
+            <td>Introduction to Homeopathy, Remedies</td>
+            <td>8 Weeks</td>
+            <td>$149.99</td>
+          </tr>
+          <tr>
+            <td>Nutrition & Healing</td>
+            <td>Nutrition, Healing Foods</td>
+            <td>6 Weeks</td>
+            <td>$129.99</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Teacher's Name -->
+      <div class="teacher-name">Instructor: Dr. Aftab Alam</div>
+    </div>
+
+    <!-- Right: Course Image, Heading, Pricing & Buy Button -->
+    <div class="course-info">
+      <img src="/static/images/course1.jpg" alt="Anatomy & Physiology">
+      <div class="course-heading">Anatomy & Physiology</div>
+      <div class="course-price">$199.99</div>
+      <a href="/buy" class="buy-btn">Buy Now</a>
+    </div>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="appointment-container">
+    <h1>📅 Book an Online Consultation</h1>
+    <p>Fill in the form below to request an online consultation.</p>
+
+    <!-- Flash Messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="flash-message {{ category }}">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    <form action="{{ url_for('book_appointment') }}" method="post">
+        <label for="name">👤 Full Name:</label>
+        <input type="text" name="name" required>
+
+        <label for="email">📧 Email:</label>
+        <input type="email" name="email" required>
+
+        <label for="phone">📞 Phone Number:</label>
+        <input type="text" name="phone" required>
+
+        <label for="date">📅 Preferred Date:</label>
+        <input type="date" name="date" required>
+
+        <label for="symptoms">🏥 Describe Your Symptoms:</label>
+        <textarea name="symptoms" rows="4" required></textarea>
+
+        <button type="submit">📩 Send Appointment Request</button>
+    </form>
+</div>
+
+<style>
+.appointment-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button {
+    background: green;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    background: darkgreen;
+}
+.flash-message {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+.flash-message.success { background: lightgreen; }
+.flash-message.danger { background: lightcoral; }
+</style>
+
+{% endblock %}

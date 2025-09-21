@@ -1,0 +1,29 @@
+  <!-- Header -->
+  <header>
+    <div class="logo">MARIFA UNIVERSITY</div>
+    <nav>
+      <a href="/account">Account</a>
+      <a href="/login">Login</a>
+      <a href="/store">Store</a>
+      <a href="/terms">Terms & Conditions</a>
+    </nav>
+  </header>
+
+
+
+    /* Header */
+    header {
+      background: rgba(17, 17, 17, 0.6);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      z-index: 1000;
+      letter-spacing: 0.1em;
+      user-select: none;
+    }

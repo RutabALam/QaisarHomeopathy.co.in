@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+    .content-wrapper {
+        margin-left: 200px;
+        margin-right: 200px;
+        font-family: Arial, sans-serif;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    h1 {
+        font-size: 32px;
+        color: #2C5F2D;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 24px;
+        color: #1E3A2B;
+        margin-top: 20px;
+    }
+
+    p {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    ul {
+        list-style-type: square;
+        padding-left: 20px;
+    }
+
+    ul li {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    blockquote {
+        font-size: 20px;
+        font-style: italic;
+        color: #555;
+        border-left: 4px solid #2C5F2D;
+        padding-left: 15px;
+        margin: 20px 0;
+    }
+
+    .author {
+        font-size: 18px;
+        font-weight: bold;
+        color: #2C5F2D;
+        text-align: right;
+        margin-top: 30px;
+    }
+</style>
+
+<div style="max-width: 800px; margin: 0 auto; padding: 20px; font-family: Arial, sans-serif; line-height: 1.6;">
+
+    <h1 style="color: #2c3e50;">Sharik’s Journey to Healing: Overcoming Ulcerative Colitis with Homeopathy</h1>
+    <p class="article-meta" style="color: #7f8c8d;">Published on March 27, 2025</p>
+
+    <img src="{{ url_for('static', filename='images/articles/relieffromullcer.jpg') }}" 
+         alt="Ulcerative Colitis and Homeopathy Treatment" 
+         style="width: 100%; height: auto; border-radius: 10px; margin-bottom: 20px;">
+
+    <h2 style="color: #16a085;">Understanding Ulcerative Colitis</h2>
+    <p>Ulcerative colitis is a chronic inflammatory bowel disease (IBD) that affects the colon and rectum, causing severe discomfort, pain, and digestive issues. Patients experience symptoms like persistent diarrhea, abdominal cramps, rectal bleeding, fatigue, and unintended weight loss.</p>
+
+    <p>The exact cause is unknown, but it is believed to result from an immune system malfunction where the body attacks the digestive tract, leading to inflammation. Conventional treatments often involve strong medications, steroids, or even surgery, which can have significant side effects.</p>
+
+    <blockquote style="border-left: 5px solid #16a085; padding-left: 15px; color: #34495e;">
+        “Healing is not just about suppressing symptoms; it’s about restoring balance within the body.” — Dr. Samina Alam
+    </blockquote>
+
+    <h2 style="color: #16a085;">Sharik’s Struggle and Conventional Treatment Failure</h2>
+    <p>Sharik, a young man full of life, found himself battling this painful condition. After experiencing severe symptoms, he was admitted to a renowned hospital for 10 days. Despite receiving the best allopathic treatments, he saw no real improvement in his condition.</p>
+
+    <p>Frustrated and hopeless, Sharik searched for alternatives. That’s when he discovered <strong>Qaisar Homeopathic Clinic</strong>, a place known for its natural and holistic healing approach.</p>
+
+    <h2 style="color: #16a085;">Homeopathy’s Role in Treating Ulcerative Colitis</h2>
+    <p>Unlike conventional medicine, which focuses on symptom suppression, homeopathy aims to treat the root cause. At Qaisar Homeopathic Clinic, Sharik was given a personalized treatment plan that included:</p>
+
+    <ul style="list-style-type: square; color: #16a085;">
+        <li><strong>Natural homeopathic remedies</strong> to reduce inflammation and restore gut health.</li>
+        <li><strong>Dietary guidance</strong> to avoid trigger foods and support healing.</li>
+        <li><strong>Lifestyle changes</strong> to strengthen immunity and manage stress.</li>
+    </ul>
+
+    <p>With consistent homeopathic care, Sharik’s condition improved remarkably. His bleeding stopped, digestion stabilized, and he regained his lost energy. Within months, he felt healthier and more confident in his recovery.</p>
+
+    <h2 style="color: #16a085;">Final Thoughts</h2>
+    <p>Sharik’s story is a testament to the power of homeopathy in treating chronic conditions like ulcerative colitis. Qaisar Homeopathic Clinic provided him with a new lease on life, proving that natural healing can be just as—if not more—effective than conventional medicine.</p>
+
+    <p>If you or a loved one are struggling with digestive disorders, consider the gentle yet powerful healing of homeopathy.</p>
+
+    <video width="100%" height="auto" controls>
+        <source src="{{ url_for('static', filename='videos/sharik_story.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <p style="text-align: right; font-weight: bold; color: #2c3e50;">Written by Dr. Samina Alam</p>
+
+</div>
+{% endblock %}

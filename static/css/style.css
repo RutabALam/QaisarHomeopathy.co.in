@@ -1,0 +1,1744 @@
+body {
+    font-family: 'Arial', sans-serif;
+    color: #222;  /* Dark Gray for readability */
+    text-align: left; /* Align all text to the left */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-bottom: 4px solid #006400; /* Bottle green border */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Navigation Links */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 0px;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 10px 15px;
+    border: 2px solid transparent; /* Invisible border initially */
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    padding: 5px 10px;
+}
+
+/* Hover Effect: Change text and border color */
+nav ul li:hover {
+    background-color: #006400; /* Bottle green */
+    border-color: #006400;
+}
+
+nav ul li:hover a {
+    color: white;
+}
+
+/* Button Styling */
+.btn-container {
+    display: flex;
+    gap: 5px; /* Reduce gap between buttons */
+    flex-wrap: wrap; /* Ensures buttons stay aligned on smaller screens */
+    justify-content: center; /* Centers buttons */
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #006400; /* Bottle green */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid #006400;
+}
+
+.btn:hover {
+    background-color: white;
+    color: #006400;
+    border: 2px solid #006400;
+}
+
+
+.logo img {
+    height: 50px;
+}
+
+
+
+main {
+    margin-bottom: 100px;
+    margin-top: 100px;
+    text-align: center;
+    padding: 0px;
+}
+
+.article-container {
+    max-width: 900px;  /* Limits content width */
+    margin: 0 auto;     /* Centers it horizontally */
+    padding: 20px;      /* Adds space inside */
+}
+
+
+.hero {
+    background-color: #006400;
+    color: white;
+    padding: 50px;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: white;
+    color: #006400;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: black;
+    color: white;
+}
+/* Slideshow */
+/* Slideshow Container - Fullscreen */
+.slideshow-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: black; /* Add a background to see if it's rendering */
+}
+
+/* Each Slide */
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+/* Ensure Images Fill Screen */
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Prevents stretching */
+}
+
+/* Navigation Buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: white;
+    padding: 10px 15px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.prev:hover, .next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Smooth transition effect for slides */
+.fade {
+    animation: fadeEffect 1.5s ease-in-out;
+}
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Counter */
+.live-count-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f9f9f9;
+}
+
+.live-count-heading {
+    font-size: 2.2em;
+    color: #006400;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.live-count-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.count-box {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    min-width: 220px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.count-box:hover {
+    transform: scale(1.05);
+}
+
+.count-number {
+    font-size: 2.8em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.count-box p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Icon Styling */
+.count-icon {
+    font-size: 2.5em;
+    color: #006400;
+    margin-bottom: 10px;
+}
+
+/* Articles */
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.article-box {
+    border: 2px solid #006400;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Comparison Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    border: 2px solid #006400;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+h1, h2, h3 {
+    color: #006400; /* Bottle Green */
+    font-family: 'Arial', sans-serif;
+    text-align: left; /* Align to the left */
+    padding-left: 20px;
+}
+
+h1 {
+    font-size: 42px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 38px;
+    font-weight: bold;
+}
+
+/*index articles*/
+
+.knowledge h2 {
+    text-align: left; /* Left-aligned heading */
+}
+
+.article-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.article {
+    width: 300px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    overflow: hidden;
+    text-align: left;
+}
+
+.article img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 3px solid #006400; /* Bottle Green */
+}
+
+.article-content {
+    padding: 15px;
+}
+
+.article h3 {
+    color: #006400; /* Bottle Green */
+    font-size: 22px;
+}
+
+.article p {
+    font-size: 16px;
+    color: #444;
+}
+
+.article a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background: #006400;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.article a:hover {
+    background: black;
+}
+
+/* Ensure headings are left-aligned */
+h1, h2, h3, h4, h5, h6 {
+    text-align: left;
+    color: #006400; /* Bottle Green */
+    font-weight: bold;
+}
+
+/* Ensure paragraphs and other text elements are also aligned left */
+p, li, span, a {
+    text-align: left;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Specific sections */
+.knowledge, .welcome-section, .comparison-table {
+    text-align: left;
+}
+
+.welcome-section {
+    text-align: center;  /* Center aligns text */
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.welcome-section h1 {
+    font-size: 48px;  /* Bigger heading */
+    color: #ffffff;  /* Bottle Green */
+    font-weight: bold;
+}
+
+.welcome-section p {
+    font-size: 20px;  /* Readable text */
+    color: #ffffff;
+}
+
+/* Indent the entire paragraph */
+p {
+    margin-left: 30px; /* Adjust as needed */
+    text-align: justify; /* Keeps text neat */
+    line-height: 1.6; /* Improves readability */
+}
+/* Make the page thinner and centered */
+.container {
+    max-width: 1100px;  /* Adjust width as needed */
+    margin: 0 auto;      /* Centers the content */
+    padding: 20px;       /* Adds some spacing */
+}
+/* About Page Styles */
+.about-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px;
+    text-align: left;
+}
+
+.about-container h1 {
+    padding: 40px;
+    font-size: 36px;
+    color: #006400; /* Bottle Green */
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.about-container .subheading {
+    font-size: 20px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-section h2 {
+    font-size: 28px;
+    color: #006400;
+    margin-bottom: 15px;
+}
+
+.about-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-section ul li {
+    font-size: 18px;
+    margin: 5px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.about-section ul li::before {
+    content: "✔";
+    color: #006400;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.about-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Image Styling */
+.about-section img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Social Media Buttons */
+.social-icons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.social-btn {
+    display: inline-block;
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 5px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.facebook {
+    background-color: #1877f2;
+}
+
+.instagram {
+    background-color: #c13584;
+}
+
+.whatsapp {
+    background-color: #25d366;
+}
+
+.social-btn:hover {
+    opacity: 0.8;
+}
+
+.services {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.section-title {
+    font-size: 36px;
+    color: #016936; /* Bottle Green */
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.service-card {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.service-icon img {
+    width: 60px;
+    height: 60px;
+}
+
+.service-title {
+    font-size: 22px;
+    color: #016936;
+    margin-top: 10px;
+}
+
+.service-desc {
+    font-size: 16px;
+    color: #666;
+    margin-top: 10px;
+}
+
+.toggle-btn {
+    background: #016936;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.toggle-btn:hover {
+    background: #014a25;
+}
+
+.service-full-desc {
+    font-size: 14px;
+    color: #444;
+    margin-top: 10px;
+    display: none;
+    text-align: left;
+}
+.services {
+    text-align: center;
+    padding: 50px;
+    background: #f9f9f9;
+}
+
+.heading {
+    font-size: 36px;
+    color: #016A30;
+    margin-bottom: 10px;
+}
+
+.subheading {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.service-box {
+    background: white;
+    padding: 15px;
+    border-left: 5px solid #016A30;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.service-box:hover {
+    background: #016A30;
+    color: white;
+    border-left: 5px solid white;
+}
+.staff {
+    text-align: center;
+    padding: 50px;
+    background: #f9f9f9;
+}
+
+.heading {
+    font-size: 36px;
+    color: #016A30;
+    margin-bottom: 10px;
+}
+
+.subheading {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: 28px;
+    color: #016A30;
+    margin-top: 40px;
+    border-bottom: 3px solid #016A30;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.staff-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 0;
+}
+
+.staff-card {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.staff-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 10%;
+    margin-right: 20px;
+    object-fit: cover;
+    border: 3px solid #016A30;
+}
+
+.staff-info {
+    text-align: left;
+}
+
+.staff-info h3 {
+    font-size: 22px;
+    color: #016A30;
+    margin: 0;
+}
+
+.qualification {
+    font-size: 16px;
+    color: #555;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 16px;
+    color: #333;
+}
+.internship {
+    text-align: center;
+    padding: 50px;
+    background: #f9f9f9;
+}
+
+.heading {
+    font-size: 36px;
+    color: #016A30;
+    margin-bottom: 10px;
+}
+
+.subheading {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.internship-section {
+    max-width: 900px;
+    margin: auto;
+    text-align: left;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.internship-section h2 {
+    font-size: 24px;
+    color: #016A30;
+    border-bottom: 2px solid #016A30;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.internship-section p {
+    font-size: 16px;
+    color: #333;
+}
+
+.internship-section ul, .internship-section ol {
+    margin-left: 20px;
+    font-size: 16px;
+    color: #333;
+}
+
+.contact-section {
+    text-align: center;
+    background: #016A30;
+    color: white;
+}
+
+.contact-section p {
+    font-size: 16px;
+    color: white;
+}
+.consultation {
+    text-align: center;
+    padding: 50px;
+    background: #f9f9f9;
+}
+
+.heading {
+    font-size: 36px;
+    color: #016A30;
+    margin-bottom: 10px;
+}
+
+.subheading {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.consultation-section {
+    max-width: 800px;
+    margin: auto;
+    text-align: left;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.consultation-section h2 {
+    font-size: 24px;
+    color: #016A30;
+    border-bottom: 2px solid #016A30;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.consultation-section p, .consultation-section ol {
+    font-size: 16px;
+    color: #333;
+}
+
+.consultation-section ol {
+    margin-left: 20px;
+}
+
+.disclaimer {
+    background: #ffe5e5;
+    border-left: 4px solid red;
+    padding: 15px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form label {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    background: #016A30;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form button:hover {
+    background: #013d1b;
+}
+
+.contact-section {
+    text-align: center;
+    background: #016A30;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.contact-section p {
+    font-size: 16px;
+    color: white;
+}
+.knowledge {
+    text-align: center;
+    padding: 50px;
+    background: #f9f9f9;
+}
+
+.heading {
+    font-size: 36px;
+    color: #016A30;
+    margin-bottom: 10px;
+}
+
+.subheading {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.articles-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.article-box {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: left;
+}
+
+.article-box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.article-content h2 {
+    font-size: 22px;
+    color: #016A30;
+    margin-top: 10px;
+}
+
+.article-content p {
+    font-size: 16px;
+    color: #333;
+    text-indent: 30px;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    color: #016A30;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.read-more:hover {
+    color: #013d1b;
+    text-decoration: underline;
+}
+.knowledge {
+    text-align: center;
+    padding: 50px;
+    background: #f9f9f9;
+}
+
+.heading {
+    padding: 30px;
+    font-size: 36px;
+    color: #016A30;
+    margin-bottom: 10px;
+}
+
+.subheading {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Container for the two-panel layout */
+.knowledge-container {
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+    gap: 20px;
+}
+
+/* Left Panel (Article List) */
+.article-list {
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.article-list h2 {
+    font-size: 22px;
+    color: #016A30;
+}
+
+.article-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.article-list li {
+    margin: 10px 0;
+}
+
+.article-list a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.article-list a:hover {
+    color: #016A30;
+}
+
+/* Right Panel (Article Content) */
+/* 📦 Article Container (Smaller & Compact) */
+.article-container {
+    display: flex;
+    align-items: center; /* Aligns image and text */
+    width: 70%; /* Reduce width */
+    max-width: 900px; /* Limit maximum width */
+    background-color: white; /* Keeps it clean */
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow for depth */
+    padding: 12px; /* Less padding */
+    margin: 10px auto; /* Centered */
+}
+
+/* 🖼 Article Image (Small & Left-Aligned) */
+.article-thumbnail {
+    width: 50px; /* Smaller size */
+    height: 50px; /* Keep it square */
+    object-fit: cover; /* Maintain aspect ratio */
+    margin-right: 12px; /* Space between image & text */
+}
+
+/* 📝 Article Text */
+.article-title {
+    font-size: 18px; /* Smaller heading */
+    margin: 0 0 5px 0;
+}
+
+.article-preview {
+    font-size: 14px; /* Smaller text */
+    color: #555; /* Softer color */
+    margin: 0;
+}
+
+/* 🔘 Read More Button */
+.read-more {
+    font-size: 14px;
+    padding: 5px 10px;
+    background-color: #006400; /* Dark green */
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.read-more:hover {
+    background-color: #004d00; /* Darker green on hover */
+}
+
+
+.read-more {
+    background-color: #006400;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.read-more:hover {
+    background-color: #004d00;
+}
+
+.full-article {
+    width: 100%;  /* Full width */
+    max-width: 100%; /* No restrictions */
+    padding: 20px;  /* Add some space */
+    text-align: justify; /* Make text aligned properly */
+}
+.knowledge-hub {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.knowledge-hub h1 {
+    font-size: 2em;
+    color: #006400;
+    text-align: center;
+    margin-top: 100px; /* Adjust this value to push it down */
+}
+
+
+
+/* Search Box */
+.search-container {
+    margin-bottom: 20px;
+}
+
+#search {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Article List */
+.articles-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+/* Individual Article */
+.article-container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+.article-heading {
+    font-size: 2em;
+    color: #006400;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.article-heading {
+    font-size: 2em; /* ✅ Make it bigger */
+    font-weight: bold;
+    color: #006400; /* Bottle Green */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.article-meta {
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.article-image {
+    display: block;
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+    margin: 20px auto;
+    border-radius: 5px;
+}
+
+.article-text {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.article-quote {
+    font-size: 20px;
+    font-style: italic;
+    text-align: center;
+    color: #444;
+    background: #f9f9f9;
+    padding: 10px;
+    border-left: 5px solid #006400;
+    margin: 20px 0;
+}
+
+
+.read-more {
+    display: inline-block;
+    margin-top: 5px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    padding: 40px 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-section {
+    max-width: 300px;
+    text-align: left;
+}
+
+.footer-section h3 {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #fff; /* Ensuring white color for headings */
+}
+
+.footer-section p {
+    font-size: 0.9em;
+    opacity: 0.8;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 8px 0;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9em;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.footer-section ul li a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.social-icons a {
+    margin: 0 8px;
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 30px;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.social-icons img:hover {
+    opacity: 1;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    padding: 15px 0;
+    border-top: 1px solid #555;
+    font-size: 0.8em;
+    opacity: 0.7;
+}
+/* Common styles for both sections */
+.why-homeopathy, .why-qaisar {
+    margin-top: 110px; 
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+/* Background images */
+.why-homeopathy {
+    background-image: url('/static/images/why-homeopathy.jpg');
+}
+
+.why-qaisar {
+    margin-top: 210px; 
+    position: relative;
+    width: 100%;
+    min-height: 400px; /* Adjust this as needed */
+    background: url('/static/images/qaisar-bg.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+    overflow: hidden;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    width: 80%;
+    max-width: 900px;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.why-qaisar::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .overlay {
+        width: 95%;
+        padding: 20px;
+    }
+}
+
+/* Dark overlay */
+.overlay {
+    background: rgba(0, 0, 0, 0.6);  /* Transparent black */
+    padding: 20px;
+    width: 80%;
+    border-radius: 10px;
+}
+
+/* Heading & Text */
+.overlay h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #FFD700; /* Gold color for contrast */
+}
+
+.overlay p {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply animation */
+.overlay {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    width: 80%;
+    border-radius: 10px;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+.why-homeopathy,
+.why-qaisar {
+    position: relative;
+    height: 600px; /* Adjust this value as needed */
+}
+
+.why-homeopathy img,
+.why-qaisar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the space without distortion */
+}
+.comparison-section {
+    background-image: url('/static/images/comparison-bg.jpg'); /* Add your image */
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
+    color: white; /* Ensure text is readable */
+}
+.main-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+.navbar {
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .why-section {
+        height: 300px; /* Reduce height for mobile */
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+.welcome-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+    background: #006400;  /* Bottle Green Background */
+    color: white;
+}
+
+.welcome-content {
+    background: rgba(255, 255, 255, 0.1); /* Light transparent overlay */
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 700px;
+}
+
+.welcome-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.welcome-section p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+.article-page h1 {
+    margin-top: 40px; /* Adjust as needed */
+    text-align: center;
+    font-size: 2.5em;
+    color: #006400;
+}
+/* Move slideshow upwards by 50px */
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: -50px; /* Moves it 50px closer to header */
+    z-index: 1;
+}
+
+/* Ensure Welcome Section starts right below the slideshow */
+.welcome-section {
+    position: relative;
+    z-index: 2;
+    background-color: #006400; /* Green background */
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+    margin-top: 0px; /* Ensures it starts immediately after slideshow */
+}
+.articles-section {
+    width: 100%; /* Use full page width */
+    overflow-x: auto; /* Enables horizontal scrolling if needed */
+    white-space: nowrap; /* Prevents wrapping to the next line */
+}
+
+.article-container {
+    display: flex;
+    gap: 20px; /* Space between articles */
+    overflow-x: auto; /* Enables horizontal scrolling */
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+.article-box {
+    flex: 0 0 auto; /* Prevents shrinking */
+    width: 300px; /* Set fixed width for each box */
+    white-space: normal; /* Allows text wrapping inside */
+}
+/* Default layout (for large screens) */
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+/* === Mobile Responsive Styling === */
+@media (max-width: 1024px) {
+    /* Make the slideshow images responsive */
+    .slideshow-container img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Adjust article section */
+    .article-container {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Stack sections vertically for mobile */
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* Make the header more compact */
+    .header {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    /* Adjust the slideshow for mobile */
+    .slideshow-container img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Center the "Welcome" section */
+    .welcome-section {
+        text-align: center;
+        padding: 20px;
+    }
+
+    /* Stack article blocks vertically */
+    .article-section {
+        display: block;
+        text-align: center;
+    }
+
+    .article-container {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    /* Improve button sizes for mobile */
+    .btn {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further reduce margins for smaller screens */
+    .article-container {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    /* Make text size larger for readability */
+    h1, h2, h3 {
+        font-size: larger;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    /* Make navigation menu more compact */
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Stack footer items */
+    .footer {
+        text-align: center;
+    }
+}
+/* Article Section */
+.article-section {
+    max-width: 1200px; /* Adjust width as needed */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Article Container */
+.article-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows articles to move to the next row if needed */
+    justify-content: space-between; /* Spreads articles evenly */
+    gap: 20px;
+}
+
+/* Individual Article Box */
+.article-box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(33.33% - 20px); /* Ensures three articles in a row */
+    min-width: 250px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.article-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.article-box h3 {
+    color: #006400;
+    margin: 10px 0;
+}
+
+.article-box .read-more {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #006400;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .article-box {
+        width: calc(50% - 20px); /* Two articles per row */
+    }
+}
+
+@media (max-width: 600px) {
+    .article-box {
+        width: 100%; /* One article per row */
+    }
+}
+/* 🎨 Search Box Container */
+.search-container {
+    display: flex;
+    justify-content: center; /* Centers the search box */
+    align-items: center;
+    width: 100%;
+    max-width: 800px; /* Adjust width for desktop screens */
+    margin: 30px auto; /* Adds space above and below */
+    position: relative;
+}
+
+/* 🔍 Search Box Input */
+#search-box {
+    width: 100%;
+    padding: 18px 60px 18px 25px; /* More padding for a premium feel */
+    font-size: 22px; /* Bigger text */
+    border: 3px solid #006400; /* Dark green border */
+    border-radius: 50px; /* Rounded edges */
+    outline: none;
+    background-color: white; /* Ensures contrast */
+    transition: all 0.3s ease-in-out; /* Smooth animation */
+}
+
+/* ✨ When User Clicks on the Search Box */
+#search-box:focus {
+    border-color: #004d00; /* Slightly darker border */
+    box-shadow: 0px 0px 15px rgba(0, 100, 0, 0.6); /* Glow effect */
+}
+
+/* 🔍 Search Icon Inside the Box */
+.search-container i {
+    position: absolute;
+    right: 20px; /* Keeps icon inside the box */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px; /* Larger icon */
+    color: #006400; /* Dark green */
+    cursor: pointer;
+}
+/* Basic Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    color: white;
+}
+
+.logo img {
+    height: 50px;
+}
+
+/* Navigation Styling */
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+/* Hide Hamburger Menu on Large Screens */
+.hamburger {
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Responsive Design: Show Hamburger Menu on Small Screens */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background: white;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    nav a {
+        color: #28a745;
+        padding: 10px;
+        display: block;
+    }
+
+    /* Show Menu When Active */
+    nav.active {
+        display: flex;
+    }
+}
+.error-container {
+    text-align: center;
+    margin: 10% auto;
+    padding: 20px;
+}
+
+.error-container h1 {
+    font-size: 100px;
+    color: #2C3E50;
+}
+
+.error-container p {
+    font-size: 20px;
+    color: #7F8C8D;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #27AE60;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #1E8449;
+}
