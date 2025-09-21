@@ -1,39 +1,6 @@
-# Core framework
-Flask==3.0.3
-
-# Database & ORM
-SQLAlchemy==2.0.36
-Flask-SQLAlchemy==3.1.1
-psycopg2-binary==2.9.9   # PostgreSQL
-mysqlclient==2.2.4       # MySQL (optional, use one DB driver)
-
-# Environment variables
-python-dotenv==1.0.1
-
-# Authentication & security
-Flask-Login==0.6.3
-Flask-Bcrypt==1.0.1
-
-# Forms & validation
-WTForms==3.1.2
-email-validator==2.2.0
-
-# Templates
-Jinja2==3.1.4
-
-# File & image handling
-Pillow==11.0.0
-
-# API support
-Flask-RESTX==1.3.0
-
-# Email support
-Flask-Mail==0.10.0
-
-# Background tasks / async
-Celery==5.4.0
-redis==5.0.8
-
-# Deployment / production
-gunicorn==23.0.0
-gevent==24.2.1
+Flask==2.3.4
+gunicorn==20.1.0
+Jinja2==3.1.2
+itsdangerous==2.1.2
+click==8.1.3
+Werkzeug==2.3.7
