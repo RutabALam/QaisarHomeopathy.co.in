@@ -1,8 +1,6 @@
 {% extends "base.html" %}
 
 {% block content %}
-
-<!-- Slideshow -->
 <section class="slideshow-container">
     <div class="slide fade">
         <img src="{{ url_for('static', filename='images/slide1.jpg') }}" alt="Slide 1">
@@ -15,7 +13,6 @@
     </div>
     
 
-    <!-- Navigation Buttons -->
     <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
     <a class="next" onclick="changeSlide(1)">&#10095;</a>
 
@@ -33,7 +30,6 @@
 </section>
 
 
-<!-- Live Counter Section -->
 <section class="live-count-section">
     <h2 class="live-count-heading">Our Achievements</h2>  
     <div class="live-count-container">
@@ -56,15 +52,14 @@
 </section>
 
 
-<!-- Why Homeopathy? -->
 <section class="why-homeopathy">
     <div class="overlay">
         <h2>Why Choose Homeopathy?</h2>
-        <p>Homeopathy is a <strong>natural, holistic, and effective</strong> approach to healing, suitable for both <strong>chronic and acute conditions</strong>. It addresses a wide range of ailments, including <em>allergies, skin disorders, migraines, digestive issues, and common infections</em>. Unlike conventional medicine, homeopathy focuses on <strong>treating the root cause</strong> rather than just suppressing symptoms.</p>
+        <p>Homeopathy is a **natural, holistic, and effective** approach to healing, suitable for both **chronic and acute conditions**. It addresses a wide range of ailments, including *allergies, skin disorders, migraines, digestive issues, and common infections*. Unlike conventional medicine, homeopathy focuses on **treating the root cause** rather than just suppressing symptoms.</p>
     
-        <p>With its <strong>safe, non-toxic, and side-effect-free</strong> remedies, homeopathy is suitable for people of all ages, including infants, pregnant women, and the elderly. It is also <strong>cost-effective and environmentally sustainable</strong>, making it a responsible choice in modern healthcare. More than just a treatment, homeopathy is a <strong>philosophy of healing</strong>—one that works in harmony with the body's natural intelligence and fosters lasting wellness.</p>
+        <p>With its **safe, non-toxic, and side-effect-free** remedies, homeopathy is suitable for people of all ages, including infants, pregnant women, and the elderly. It is also **cost-effective and environmentally sustainable**, making it a responsible choice in modern healthcare. More than just a treatment, homeopathy is a **philosophy of healing**—one that works in harmony with the body's natural intelligence and fosters lasting wellness.</p>
     
-        <p>At <strong>Qaisar Homeopathic Clinic</strong>, we embrace this time-tested wisdom, providing <strong>compassionate, personalized care</strong> to help individuals regain their vitality and well-being.</p>
+        <p>At **Qaisar Homeopathic Clinic**, we embrace this time-tested wisdom, providing **compassionate, personalized care** to help individuals regain their vitality and well-being.</p>
     </div>
 </section>
 
@@ -72,9 +67,9 @@
     <div class="overlay">
         <h2>Why Choose Qaisar Homeopathic Clinic?</h2>
     
-    <p><strong>Qaisar Homeopathic Clinic</strong> is a distinguished establishment with over <strong>20 years of experience</strong>, offering high-quality, non-toxic, and effective treatments in <strong>Aurangabad, Maharashtra</strong>, as well as through <strong>online consultations</strong>. The clinic is known for its personalized approach, ensuring each patient receives care tailored to their specific health needs.</p>
+    <p>**Qaisar Homeopathic Clinic** is a distinguished establishment with over **20 years of experience**, offering high-quality, non-toxic, and effective treatments in **Aurangabad, Maharashtra**, as well as through **online consultations**. The clinic is known for its personalized approach, ensuring each patient receives care tailored to their specific health needs.</p>
 
-    <p>The clinic provides <strong>homeopathic treatments</strong> for a variety of conditions, including <em>hypothyroidism, hyperthyroidism, skin disorders, allergies, and chronic illnesses</em>, aiming for permanent normalization of body functions. Additionally, it specializes in <strong>mental health treatments</strong> for issues such as <em>stress, anxiety, and emotional well-being</em>, all without adverse side effects.</p>
+    <p>The clinic provides **homeopathic treatments** for a variety of conditions, including *hypothyroidism, hyperthyroidism, skin disorders, allergies, and chronic illnesses*, aiming for permanent normalization of body functions. Additionally, it specializes in **mental health treatments** for issues such as *stress, anxiety, and emotional well-being*, all without adverse side effects.</p>
 
     <p>For more details, visit the clinic's social media pages: 
         <a href="https://www.instagram.com/qaisarhomeopathic/" target="_blank">Instagram</a> | 
@@ -84,102 +79,51 @@
 </section>
 
 
-<!-- Comparison Table -->
 <section class="comparison">
     <h2>Homeopathy vs. Allopathy vs. Ayurveda</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Aspect</th>
-                <th>Homeopathy</th>
-                <th>Allopathy</th>
-                <th>Ayurveda</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>Treatment Approach</strong></td>
-                <td>Holistic & natural; stimulates the body's self-healing</td>
-                <td>Drug-based; focuses on symptom suppression</td>
-                <td>Herbal & lifestyle-based; balances body energies</td>
-            </tr>
-            <tr>
-                <td><strong>Side Effects</strong></td>
-                <td>None; remedies are highly diluted and safe</td>
-                <td>Common; may include drug resistance & organ damage</td>
-                <td>Minimal; but improper use may cause imbalances</td>
-            </tr>
-            <tr>
-                <td><strong>Effectiveness</strong></td>
-                <td>Long-term; addresses root cause & overall well-being</td>
-                <td>Fast relief; but may not cure underlying issue</td>
-                <td>Effective for chronic conditions but works slowly</td>
-            </tr>
-            <tr>
-                <td><strong>Personalization</strong></td>
-                <td>Highly individualized; considers physical & mental state</td>
-                <td>One-size-fits-all approach; same drugs for all patients</td>
-                <td>Personalized based on body type (doshas: Vata, Pitta, Kapha)</td>
-            </tr>
-            <tr>
-                <td><strong>Best For</strong></td>
-                <td>Chronic diseases, allergies, skin disorders, mental health</td>
-                <td>Emergency care, surgeries, infections, critical conditions</td>
-                <td>General wellness, digestive issues, lifestyle-related disorders</td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="table-container"> <table>
+            <thead>
+                <tr>
+                    <th>Aspect</th>
+                    <th>Homeopathy</th>
+                    <th>Allopathy</th>
+                    <th>Ayurveda</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>**Treatment Approach**</td>
+                    <td>Holistic & natural; stimulates the body's self-healing</td>
+                    <td>Drug-based; focuses on symptom suppression</td>
+                    <td>Herbal & lifestyle-based; balances body energies</td>
+                </tr>
+                <tr>
+                    <td>**Side Effects**</td>
+                    <td>None; remedies are highly diluted and safe</td>
+                    <td>Common; may include drug resistance & organ damage</td>
+                    <td>Minimal; but improper use may cause imbalances</td>
+                </tr>
+                <tr>
+                    <td>**Effectiveness**</td>
+                    <td>Long-term; addresses root cause & overall well-being</td>
+                    <td>Fast relief; but may not cure underlying issue</td>
+                    <td>Effective for chronic conditions but works slowly</td>
+                </tr>
+                <tr>
+                    <td>**Personalization**</td>
+                    <td>Highly individualized; considers physical & mental state</td>
+                    <td>One-size-fits-all approach; same drugs for all patients</td>
+                    <td>Personalized based on body type (doshas: Vata, Pitta, Kapha)</td>
+                </tr>
+                <tr>
+                    <td>**Best For**</td>
+                    <td>Chronic diseases, allergies, skin disorders, mental health</td>
+                    <td>Emergency care, surgeries, infections, critical conditions</td>
+                    <td>General wellness, digestive issues, lifestyle-related disorders</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </section>
-
-<style>
-    .comparison {
-        max-width: 900px;
-        margin: auto;
-        padding: 20px;
-        text-align: center;
-        background: #f9f9f9;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    h2 {
-        color: #2E7D32;
-        font-size: 24px;
-        margin-bottom: 15px;
-    }
-
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        background: white;
-        border-radius: 8px;
-        overflow: hidden;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    th, td {
-        padding: 12px;
-        text-align: left;
-        border-bottom: 1px solid #ddd;
-    }
-
-    th {
-        background: #2E7D32;
-        color: white;
-        font-weight: bold;
-        text-align: center;
-    }
-
-    tr:hover {
-        background: #f1f1f1;
-    }
-
-    td:first-child {
-        font-weight: bold;
-        color: #333;
-    }
-</style>
-
-
 
 {% endblock %}
