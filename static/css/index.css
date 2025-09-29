@@ -1,0 +1,274 @@
+/*
+    --------------------------------------------------
+    1. BASE STYLES (MOBILE-FIRST - applied to all sizes)
+    --------------------------------------------------
+*/
+
+/* Box Sizing and Viewport Setup */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Ensure this is in your base.html <head> for proper mobile scaling:
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+*/
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #ffffff;
+    color: #333;
+}
+
+section {
+    padding: 30px 15px; /* Comfortable padding for small screens */
+    margin: 0;
+    max-width: 100vw; /* Prevent horizontal overflow */
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    color: #2E7D32; /* Primary Green Color */
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/*
+    --------------------------------------------------
+    2. SLIDESHOW STYLES
+    --------------------------------------------------
+*/
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+}
+
+.slide img {
+    width: 100%;
+    height: auto; /* Scales image proportionally */
+    display: block;
+}
+
+/* Navigation button styling for touch targets */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 12px; /* Smaller padding on mobile */
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px; /* Smaller font on mobile */
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/*
+    --------------------------------------------------
+    3. WELCOME & TEXT SECTIONS
+    --------------------------------------------------
+*/
+.welcome-section {
+    background-color: #E8F5E9; /* Light green background */
+    text-align: center;
+}
+
+.why-homeopathy, .why-qaisar {
+    /* Assuming background images are set via inline style or jinja like in the HTML */
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll; /* Keep background static on mobile */
+    color: white;
+    padding: 40px 15px;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.7); /* Darker overlay for better text readability */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.why-qaisar a {
+    color: #A5D6A7; /* Light green color for links */
+    font-weight: bold;
+}
+
+/*
+    --------------------------------------------------
+    4. LIVE COUNTER SECTION (FLEXBOX FOR RESPONSIVENESS)
+    --------------------------------------------------
+*/
+.live-count-section {
+    background: #f0f0f0;
+    padding: 30px 15px;
+}
+
+.live-count-heading {
+    margin-bottom: 30px;
+}
+
+.live-count-container {
+    display: flex;
+    flex-direction: column; /* Stack vertically on small screens */
+    gap: 25px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.count-box {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.count-icon {
+    font-size: 36px;
+    color: #2E7D32;
+    margin-bottom: 10px;
+}
+
+.count-number {
+    font-size: 40px;
+    color: #1B5E20;
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+.count-box p {
+    font-size: 16px;
+    margin: 0;
+    color: #555;
+}
+
+/*
+    --------------------------------------------------
+    5. COMPARISON TABLE (HORIZONTAL SCROLLING)
+    --------------------------------------------------
+*/
+.comparison {
+    max-width: 100%; /* Use full width on mobile */
+    padding: 0; /* Remove padding here */
+    background: #ffffff;
+}
+
+.table-container {
+    overflow-x: auto; /* Enables horizontal scrolling on small screens */
+    -webkit-overflow-scrolling: touch; /* For smoother scrolling on iOS */
+    padding: 0 15px; /* Add padding to sides of the scrollable area */
+}
+
+table {
+    /* Setting a minimum width ensures the columns don't crush */
+    min-width: 650px; 
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 10px; /* Reduced padding for mobile table cells */
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    font-size: 13px; /* Smaller font for better fit */
+    vertical-align: top;
+}
+
+th {
+    background: #2E7D32;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 14px;
+}
+
+td:first-child {
+    font-weight: bold;
+    color: #1B5E20;
+    width: 25%; /* Give the 'Aspect' column a fixed width */
+}
+
+/*
+    --------------------------------------------------
+    6. MEDIA QUERIES (TABLET & DESKTOP ADJUSTMENTS)
+    --------------------------------------------------
+*/
+@media (min-width: 768px) {
+    
+    section {
+        padding: 60px 20px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    /* Slideshow: Larger navigation buttons */
+    .prev, .next {
+        padding: 16px;
+        font-size: 20px;
+    }
+    
+    /* Live Counter: Switches to horizontal layout */
+    .live-count-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .count-box {
+        flex-basis: 30%; /* Gives equal space to 3 boxes */
+        padding: 35px 20px;
+    }
+
+    .count-number {
+        font-size: 48px;
+    }
+
+    /* Comparison Table: Restore desktop appearance */
+    .comparison {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 20px;
+        background: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .table-container {
+        overflow-x: hidden; /* Disable scrolling on desktop */
+        padding: 0;
+    }
+    
+    table {
+        min-width: auto; /* Remove minimum width constraint */
+    }
+
+    th, td {
+        padding: 12px;
+        font-size: 14px;
+    }
+}
